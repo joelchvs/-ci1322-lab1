@@ -4,8 +4,8 @@ import ucr.ac.ecci.ci1322.laboratorio1.model.Student;
 
 public interface StudentDao {
 
-    Student findById(String id);
-    String create(Student entity);
+    Student findById(String id) throws Exception;
+    String create(Student entity) throws Exception;
     void update(Student entity);
     void remove(Student entity);
 

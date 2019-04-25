@@ -3,27 +3,33 @@ package ucr.ac.ecci.ci1322.laboratorio1.core.book.service;
 import ucr.ac.ecci.ci1322.laboratorio1.core.book.dao.BookDao;
 import ucr.ac.ecci.ci1322.laboratorio1.model.Book;
 
-public class BookServiceImpl {
+public class BookServiceImpl implements BookService{
 
-    private BookDao bookDao;
+    BookDao bookDao;
 
-    Book findById(String id)
+    public BookServiceImpl () throws Exception
+    {
+        bookDao= new JdbcBookService();
+    }
+
+   public Book findById(String id) throws Exception
     {
         return bookDao.findById(id);
 
     }
 
-    String create(Book entity)
+    public String create(Book entity) throws Exception
+
     {
         return bookDao.create(entity);
     }
 
-    void update(Book entity)
+    public void update(Book entity)
     {
         bookDao.update(entity);
     }
 
-    void remove(Book entity)
+   public void remove(Book entity)
     {
         bookDao.remove(entity);
     }

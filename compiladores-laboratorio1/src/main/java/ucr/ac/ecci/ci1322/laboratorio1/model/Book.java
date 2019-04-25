@@ -6,10 +6,11 @@ public class Book {
     private String author;
     private String borrowerId;
 
-    public Book(String code, String title, String author) {
+    public Book(String code, String title, String author, String borrowerId) {
         this.code = code;
         this.title = title;
         this.author = author;
+        this.borrowerId=borrowerId;
     }
 
     public String getCode() {
